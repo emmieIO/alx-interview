@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """0-lockboxes.py"""
 
+
 def canUnlockAll(boxes):
     """
     This function checks if all the boxes
