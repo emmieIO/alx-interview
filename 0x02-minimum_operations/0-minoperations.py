@@ -4,7 +4,7 @@
 
 def minOperations(n):
     """ Minimum Operations """
-    
+
     if not isinstance(n, int):
         return 0
 
