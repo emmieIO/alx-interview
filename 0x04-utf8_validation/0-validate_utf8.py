@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!usr/bin/env python3
 """utf8_validator"""
 from typing import List
 
