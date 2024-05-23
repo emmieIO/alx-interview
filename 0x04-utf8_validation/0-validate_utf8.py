@@ -1,9 +1,8 @@
 #!usr/bin/env python3
 """utf8_validator"""
-from typing import List
 
 
-def validUTF8(data: List[int]) -> bool:
+def validUTF8(data):
     """utf8_validator"""
     remaining_bytes = 0
 
