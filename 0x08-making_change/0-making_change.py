@@ -4,20 +4,15 @@
 
 def makeChange(coins, total):
     """make change problem"""
-    coins.sort()
-    dp = [0] * (total + 1)
+    if total <= 0:
+            return 0
 
-    for i in range(1, total+1):
-        minn = float("inf")
+    # Initialize dp array with a value larger than any possible number of coins
+    dp = [total + 1] * (total + 1)
+    dp[0] = 0
 
-        for coin in coins:
-            diff = i - coin
-            if diff < 0:
-                break
-            min(minn, dp[diff] + 1)
-        dp[i] = minn
+    for coin in coins:
+        for x in range(coin, total + 1):
+            dp[x] = min(dp[x], dp[x - coin] + 1)
 
-        if dp[total] < float('inf'):
-            return dp[total]
-        else:
-            return -1
+    return dp[total] if dp[total] != total + 1 else -1
